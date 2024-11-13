@@ -10,9 +10,8 @@
   --title-color: #FF8080;
   --background-color: #CDFADB;
   --text-color: #F6FDC3;
-  --branco: #f8f2f2;
-  --laranja: #FFCF96;
-  --preto: #1d1c1c;
+  --white: #f8f2f2;
+  --black: #1d1c1c;
 }
 
 body {
@@ -39,7 +38,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--branco); 
+  background-color: var(--white); 
   background-size: cover;
   opacity: 0.5;
   z-index: -1;
@@ -99,7 +98,7 @@ footer {
   font-size: 16px;
   font-weight: 600;
   background: var(--background-color);
-  color: var(--preto);
+  color: var(--black);
   text-align: center;
   width: 100%;
   position: relative;
@@ -107,7 +106,7 @@ footer {
 }
 
 h2, h3 {
-  color: var(--preto);
+  color: var(--black);
   text-align: center;
   font-family: "Rochester", cursive;
   font-size: 52px;
@@ -142,7 +141,7 @@ h2, h3 {
 #frase-conteudo, #frase-autoria {
   padding: 16px;
   border-radius: 8px;
-  background: var(--branco);
+  background: var(--white);
   word-wrap: break-word; 
   overflow-wrap: break-word; 
 }
@@ -162,7 +161,7 @@ h2, h3 {
 }
 
 #frase-conteudo::placeholder,  #frase-autoria::placeholder{
-  color: var(--preto);
+  color: var(--black);
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -189,7 +188,7 @@ h2, h3 {
 #botao-salvar, #botao-cancelar {
   padding: 8px 32px;
   border-radius: 32px;
-  color: var(--preto);
+  color: var(--black);
   font-family: "Poppins", sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -203,7 +202,7 @@ h2, h3 {
 }
 
 #botao-cancelar {
-  color: var(--preto);
+  color: var(--black);
 }
 
 #lista-frases-container {
@@ -228,7 +227,7 @@ h2, h3 {
 .li-frase {
   position: relative;
   padding: 16px;
-  background: var(--Branco, #FFF);
+  background: var(--white, #FFF);
   box-shadow: 8px 8px 0px 0px var(--background-color);
   flex: 1 1 calc(33.333% - 24px);
   max-width: calc(33.333% - 24px);
@@ -243,7 +242,7 @@ h2, h3 {
 
 .frase-conteudo, .frase-autoria {
   margin-left: 20px; 
-  color: var(--preto, #444);
+  color: var(--black, #444);
   font-family: "Roboto Mono";
   font-style: normal;
   line-height: normal;
