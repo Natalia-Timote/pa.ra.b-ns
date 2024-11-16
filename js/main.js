@@ -18,7 +18,11 @@ async function manipularSubmissaoFormulario(event) {
 
 
     try {
-        await api.salvarFrase({ conteudo, autoria });
+        if(id) {
+            await api.editarFrase({ id, conteudo, autoria });
+        } else {
+            await api.salvarFrase({ conteudo, autoria });
+        }
         ui.renderizarFrases();
     } catch(error) {
         alert("Erro ao salvar frase. Tente novamente mais tarde!");

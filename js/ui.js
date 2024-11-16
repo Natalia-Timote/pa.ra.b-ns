@@ -1,19 +1,22 @@
 import api from "./api.js";
 
 const ui = {
+    async preencherFormulario(fraseId) {
+        const frase = await api.buscarFrasePorId(fraseId);
+
+        document.getElementById("frase-id").value = frase.id;
+        document.getElementById("frase-conteudo").value = frase.conteudo;
+        document.getElementById("frase-autoria").value = frase.autoria;
+    },
+
     async renderizarFrases() {
         const listaFrases = document.getElementById("lista-frases");
 
         try {
             const frases = await api.buscarFrase();
 
-            frases.forEach(frase => {
-                listaFrases.innerHTML += `
-                    <li class="li-frase" data-id="${frase.id}">
-                        <div class="frase-conteudo">${frase.conteudo}</div>
-                        <div class="frase-autoria">${frase.autoria}</div>
-                `;
-            })
+            frases.forEach(ui.adicionarFraseNaLista);
+
         } catch(error) {
             alert("Erro ao obter a lista de parabéns. Tente novamente mais tarde!");
             console.log(error);
@@ -33,9 +36,23 @@ const ui = {
         const fraseAutoria = document.createElement("div");
         fraseAutoria.textContent = frase.autoria;
         fraseAutoria.classList.add("frase-autoria");
+
+        const botaoEditar = document.createElement("button");
+        botaoEditar.classList.add("botao-editar");
+        botaoEditar.onclick = () => ui.preencherFormulario(frase.id);
+
+        const iconeEditar = document.createElement("img");
+        iconeEditar.src = "assets/imagens/icone-editar.png";
+        iconeEditar.alt = "Editar";
+        botaoEditar.appendChild(iconeEditar);
+
+        const icones = document.createElement("div");
+        icones.classList.add("icones");
+        icones.appendChild(botaoEditar);
     
         li.appendChild(fraseConteudo);
         li.appendChild(fraseAutoria);
+        li.appendChild(icones);
         listaFrases.appendChild(li);
     }
 }
