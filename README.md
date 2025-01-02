@@ -36,3 +36,27 @@ O foco foi aprimorar habilidades práticas em desenvolvimento web com JavaScript
 ## 🛠️ Tecnologias aprofundadas durante o curso
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" width="80" height="80"/>                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" width="80" height="80"/>                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="80" height="80"/>
+
+## 🖼️ Imagens da Aplicação
+Uma prévia das principais telas da aplicação **Pa.ra.béns**:
+
+**🎉 Tela Inicial**
+
+A tela de boas-vindas, onde os usuários têm uma primeira impressão do aplicativo.
+
+![Tela Inicial](assets/imagens/parabens-app-apresentacao.png)
+
+**💬 Registro de Mensagens**
+
+Área onde os usuários podem escrever e salvar suas mensagens personalizadas de aniversário.
+
+![Tela de Registro de Mensagens](assets/imagens/parabens-app-cadastro.png)
+
+**📜 Mural de Recados**
+
+Um espaço especial onde todas as mensagens ficam disponíveis para visualização.
+
+![Mural](assets/imagens/parabens-app-mural.png)
+
+
+
